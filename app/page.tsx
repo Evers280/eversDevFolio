@@ -1282,7 +1282,7 @@ export default function Portfolio() {
               <Button
                 onClick={() => scrollToSection("contact")}
                 variant="outline"
-                className="border-gray-600 text-gray-300 hover:bg-white hover:text-black hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] px-8 py-3 rounded-full text-base font-medium transition-all duration-300"
+                className="border-gray-600 text-gray-300 hover:bg-gradient-to-r from-violet-600 to-indigo-600  hover:text-white hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] px-8 py-3 rounded-full text-base font-medium transition-all duration-300"
               >
                 Me Contacter
               </Button>
@@ -1302,7 +1302,7 @@ export default function Portfolio() {
                     nouveau dans le domaine, j'ai rapidement acquis des bases solides en programmation grâce à la
                     réflexion algorithmique et à la modélisation de bases de données en utilisant MCD/MLD.
                     <br />
-                    Passionné par le développement back-end, je me spécialise dans la création d'API robustes et 
+                    Passionné par le développement back-end, je me spécialise dans la création d'API REST et RESTful,
                     la gestion de bases de données. Bien que débutant dans le domaine, ma motivation et ma capacité
                     d'apprentissage rapide me permettent de relever des défis techniques complexes.
                   </p>
@@ -1372,7 +1372,7 @@ export default function Portfolio() {
                 ))}
               </div>
               
-              <h3 className="text-2xl font-medium text-white mb-12">Technologies Utiliser</h3>
+              <h4 className="text-2xl font-medium text-white mb-12">Technologies Utilisées</h4>
 
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="p-6 rounded-xl border border border-pink-500/50  hover:shadow-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all duration-300 bg-gray/30 backdrop-blur-sm">
@@ -1461,7 +1461,7 @@ export default function Portfolio() {
                 ))}
               </div>
 
-              <h3 className="text-2xl font-medium text-white mb-12">Technologies Utiliser</h3>
+              <h4 className="text-2xl font-medium text-white mb-12">Technologies Utilisées</h4>
 
 
               <div className="grid md:grid-cols-2 gap-8">
@@ -1587,7 +1587,7 @@ export default function Portfolio() {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                 <div>
                   <h3 className="text-2xl font-medium text-white">Développeur Backend</h3>
-                  <p className="text-xl text-gray-400">Ogooe Labs</p>
+                  <p className="text-xl text-gray-400">Oguooe Labs</p>
                 </div>
                 <div className="mt-2 md:mt-0">
                   <span className="bg-green-900/20 text-green-400 px-3 py-1 rounded-full text-sm border border-green-800">
@@ -1606,11 +1606,11 @@ export default function Portfolio() {
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      Conception et optimisation de bases de données
+                      Conception de bases de données
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      Développement d'APIs RESTful haute performance
+                      Développement d'APIs RESTful 
                     </li>
                   </ul>
                 </div>
@@ -1618,8 +1618,7 @@ export default function Portfolio() {
                 <div>
                   <h4 className="text-lg font-medium text-white mb-3">Réalisation Notable :</h4>
                   <p className="text-gray-400">
-                    Création d'une plateforme complète de gestion informatique permettant le suivi, la maintenance et la
-                    gestion d'inventaire du matériel IT de l'entreprise.
+                    Création d'une plateforme complète de gestion d'ordinateur.
                   </p>
                 </div>
               </div>
