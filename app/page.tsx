@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Github, Linkedin, Mail, Phone, ExternalLink, Menu, X, ArrowRight } from "lucide-react"
+import { Github, Linkedin, Mail, Phone, ExternalLink, Menu, X, ArrowRight, Download } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -1185,13 +1185,13 @@ export default function Portfolio() {
       {/* Ensure all content has relative positioning to appear above background lines */}
       <div className="relative z-10">
         {/* Navigation */}
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-sm border-b border-white/10">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
-              <div className="text-xl font-medium text-white">Evers Dev MBINI</div>
+            <div className="relative flex items-center justify-between h-16">
+              <div className="text-sm font-medium text-white">Evers Dev MBINI</div>
 
               {/* Desktop Navigation */}
-              <div className="hidden md:flex items-center space-x-8">
+              <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center space-x-5">
                 {[
                   { id: "home", label: "Accueil" },
                   { id: "about", label: "À Propos" },
@@ -1250,7 +1250,7 @@ export default function Portfolio() {
         <section id="home" className="relative z-10 min-h-screen flex items-center justify-center px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-12">
-              <div className="relative w-32 h-32 mx-auto mb-8">
+              <div className="relative w-32 h-32 mx-auto mt-20 mb-8">
                 <Image
                   src="/photo.png?height=512&width=512"
                   alt="Evers Darrell MBINI"
@@ -1261,10 +1261,10 @@ export default function Portfolio() {
               </div>
             </div>
 
-            <h1 className="text-7xl md:text-7xl lg:text-8xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white leading-tight">
               Développeur BACKEND
               <br />
-              <span className="text-gray-500">Evers Darrell MBINI</span>
+              <span className="text-gray-500 text-3xl">Evers Darrell MBINI</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -1315,6 +1315,16 @@ export default function Portfolio() {
                     une approche méthodique pour résoudre les problèmes. Je suis constamment à la recherche de nouvelles 
                     technologies à apprendre et de projets stimulants à réaliser.
                   </p>
+
+                  <div className="pt-4">
+                    <Button
+                      onClick={() => window.open("/cv-evers-darrell-mbini.pdf", "_blank")}
+                      className="bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:shadow-[0_0_25px_rgba(139,92,246,0.6)] px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 group"
+                    >
+                      <Download className="w-4 h-4 group-hover:animate-bounce" />
+                      Télécharger mon CV complet
+                    </Button>
+                  </div>
                 </div>
               </div>
 
@@ -1354,7 +1364,7 @@ export default function Portfolio() {
                 ].map((skill, index) => (
                   <div
                     key={index}
-                    className="flex items-start space-x-3 p-4 rounded-xl border border border-pink-500/50  hover:shadow-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all duration-300 bg-gray-900/20 backdrop-blur-sm"
+                    className="flex items-start space-x-3 p-4 rounded-xl border border border-pink-500/50  hover:shadow-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all duration-300 bg-gray/20 backdrop-blur-sm"
                   >
                     <div className="w-1.5 h-1.5 bg-white rounded-full mt-2 flex-shrink-0"></div>
                     <span className="text-gray-300">{skill}</span>
@@ -1365,7 +1375,7 @@ export default function Portfolio() {
               <h3 className="text-2xl font-medium text-white mb-12">Technologies Utiliser</h3>
 
               <div className="grid md:grid-cols-3 gap-8">
-                <div className="p-6 rounded-xl border border border-pink-500/50  hover:shadow-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all duration-300 bg-gray-900/30 backdrop-blur-md">
+                <div className="p-6 rounded-xl border border border-pink-500/50  hover:shadow-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all duration-300 bg-gray/30 backdrop-blur-sm">
                   <h4 className="text-lg font-medium text-white mb-4">Langages</h4>
                   <div className="space-y-3">
                     <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm">
@@ -1374,7 +1384,7 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                <div className="p-6 rounded-xl border border border-pink-500/50  hover:shadow-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all duration-300 bg-gray-900/30 backdrop-blur-md">
+                <div className="p-6 rounded-xl border border border-pink-500/50  hover:shadow-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all duration-300 bg-gray/30 backdrop-blur-sm">
                   <h4 className="text-lg font-medium text-white mb-4">Frameworks</h4>
                   <div className="space-y-3">
                     <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm mr-2 mb-2">
@@ -1386,7 +1396,7 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                <div className="p-6 rounded-xl border border border-pink-500/50  hover:shadow-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all duration-300 bg-gray-900/30 backdrop-blur-md">
+                <div className="p-6 rounded-xl border border border-pink-500/50  hover:shadow-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all duration-300 bg-gray/30 backdrop-blur-sm">
                   <h4 className="text-lg font-medium text-white mb-4">Bases de Données</h4>
                   <div className="space-y-3">
                     <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm mr-2 mb-2">
@@ -1407,7 +1417,7 @@ export default function Portfolio() {
             <div className="mb-20">
               <h4 className="text-xl font-medium text-white mb-8">Outils de Développement</h4>
               <div className="grid md:grid-cols-2 gap-8">
-                <div className="p-6 rounded-xl border border-pink-500/50  hover:shadow-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all duration-300 bg-gray-900/30 backdrop-blur-md">
+                <div className="p-6 rounded-xl border border-pink-500/50  hover:shadow-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all duration-300 bg-gray/30 backdrop-blur-sm">
                   <h5 className="text-lg font-medium text-white mb-4">Contrôle de Version</h5>
                   <div className="space-y-3">
                     <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm mr-2">
@@ -1419,7 +1429,7 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                <div className="p-6 rounded-xl border border border-pink-500/50  hover:shadow-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all duration-300 bg-gray-900/30 backdrop-blur-md">
+                <div className="p-6 rounded-xl border border border-pink-500/50  hover:shadow-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] transition-all duration-300 bg-gray-30 backdrop-blur-sm">
                   <h5 className="text-lg font-medium text-white mb-4">Déploiement</h5>
                   <div className="space-y-3">
                     <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm">
@@ -1443,7 +1453,7 @@ export default function Portfolio() {
                 {["Création d'interfaces", "Conception de maquettes"].map((skill, index) => (
                   <div
                     key={index}
-                    className="flex items-start space-x-3 p-6 rounded-xl border-2 border-cyan-500/50 hover:shadow-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.6)] transition-all duration-300 bg-gray-900/30 backdrop-blur-md"
+                    className="flex items-start space-x-3 p-6 rounded-xl border-2 border-cyan-500/50 hover:shadow-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.6)] transition-all duration-300 bg-gray/30 backdrop-blur-sm"
                   >
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0 shadow-[0_0_10px_rgba(34,211,238,0.8)]"></div>
                     <span className="text-white font-medium">{skill}</span>
@@ -1455,7 +1465,7 @@ export default function Portfolio() {
 
 
               <div className="grid md:grid-cols-2 gap-8">
-                <div className="p-6 rounded-xl border border-cyan-500/50  hover:shadow-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.6)] transition-all duration-300 bg-gray-900/30 backdrop-blur-md">
+                <div className="p-6 rounded-xl border border-cyan-500/50  hover:shadow-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.6)] transition-all duration-300 bg-gray/30 backdrop-blur-sm">
                   <h4 className="text-lg font-medium text-white mb-4">Langages</h4>
                   <div className="space-y-3">
                     <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm mr-2 mb-2">
@@ -1465,7 +1475,7 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                <div className="p-6 rounded-xl border border-cyan-500/50  hover:shadow-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.6)] transition-all duration-300 bg-gray-900/30 backdrop-blur-md">
+                <div className="p-6 rounded-xl border border-cyan-500/50  hover:shadow-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.6)] transition-all duration-300 bg-gray/30 backdrop-blur-sm">
                   <h4 className="text-lg font-medium text-white mb-4">Framework</h4>
                   <div className="space-y-3">
                     <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm">
@@ -1479,7 +1489,8 @@ export default function Portfolio() {
             <div>
               <h4 className="text-xl font-medium text-white mb-8">Outils de Design</h4>
               <div className="grid md:grid-cols-2 gap-8">
-                <div className="p-6 rounded-xl border border-cyan-500/50  hover:shadow-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.6)] backdrop-blur-md">
+                <div className="p-6 rounded-xl border border-cyan-500/50  hover:shadow-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.6)] backdrop-blur-sm transition-all duration-300 bg-gray/30">
+                
                   <span className="inline-block bg-gray-800 text-gray-300 px-4 py-2 rounded-full text-sm mr-2">
                     Figma
                   </span>
@@ -1495,11 +1506,11 @@ export default function Portfolio() {
         {/* Projects Section */}
         <section id="projects" className="relative z-10 py-32 px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-medium text-center mb-20 text-white">Projets Phares</h2>
+            <h2 className="text-4xl md:text-5xl font-medium text-center mb-20 text-white">Projets</h2>
 
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Project 1 */}
-              <div className="group hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-300 rounded-xl">
+              <div className="border border-gray-800 rounded-xl group hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] backdrop-blur-sm transition-all duration-300 rounded-xl">
                 <div className="relative h-64 bg-gradient-to-br from-blue-900/20 to-blue-600/20 rounded-xl overflow-hidden mb-6">
                   <Image
                     src="/myappibirthday.png?height=256&width=400"
@@ -1508,14 +1519,14 @@ export default function Portfolio() {
                     className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <h3 className="text-2xl font-medium text-white mb-3">MyAppBirthday</h3>
-                <p className="text-gray-400 mb-4 leading-relaxed">
+                <h3 className="text-2xl font-medium text-white mb-3 pl-7">MyAppBirthday</h3>
+                <p className="text-gray-400 mb-4 leading-relaxed px-5">
                   Une application web qui simplifie la gestion des invités et des invitations pour les fêtes
                   d'anniversaire. Dispose d'une interface intuitive avec système de notifications et gestion des RSVP.
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-6 px-6">
                   {["Next.js", "Django", "Git", "Figma"].map((tech) => (
-                    <span key={tech} className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">
+                    <span key={tech} className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-s">
                       {tech}
                     </span>
                   ))}
@@ -1523,7 +1534,7 @@ export default function Portfolio() {
                 <Link
                   href="https://github.com/Evers280/appiBirthday.git"
                   target="_blank"
-                  className="inline-flex items-center text-white hover:text-gray-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.6)] transition-all duration-300"
+                  className="inline-flex items-center text-white hover:text-gray-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.6)] transition-all duration-300 px-5 py-5"
                 >
                   <Github className="w-5 h-5 mr-2" />
                   Voir sur GitHub
@@ -1532,7 +1543,7 @@ export default function Portfolio() {
               </div>
 
               {/* Project 2 */}
-              <div className="group hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all duration-300 rounded-xl">
+              <div className="border border-gray-800 rounded-xl group hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] backdrop-blur-sm transition-all duration-300 rounded-xl">
                 <div className="relative h-64 bg-gradient-to-br from-purple-900/20 to-purple-600/20 rounded-xl overflow-hidden mb-6">
                   <Image
                     src="/taskmaster.png?height=256&width=400"
@@ -1541,12 +1552,12 @@ export default function Portfolio() {
                     className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <h3 className="text-2xl font-medium text-white mb-3">TaskMaster</h3>
-                <p className="text-gray-400 mb-4 leading-relaxed">
+                <h3 className="text-2xl font-medium text-white mb-3 pl-7">TaskMaster</h3>
+                <p className="text-gray-400 mb-4 leading-relaxed px-5">
                   Une plateforme complète de gestion des tâches avec des fonctionnalités avancées de tri, filtrage et
                   collaboration. Interface moderne avec tableaux de bord personnalisables.
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-6 pl-5">
                   {["Next.js", "Django", "Git", "Figma"].map((tech) => (
                     <span key={tech} className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">
                       {tech}
@@ -1556,7 +1567,7 @@ export default function Portfolio() {
                 <Link
                   href="https://github.com/Evers280/task.git"
                   target="_blank"
-                  className="inline-flex items-center text-white hover:text-gray-300 hover:shadow-[0_0_15px_rgba(168,85,247,0.6)] transition-all duration-300"
+                  className="inline-flex items-center text-white rounded-md hover:text-gray-300 hover:shadow-[0_0_15px_rgba(168,85,247,0.6)] transition-all duration-300 px-5 py-5"
                 >
                   <Github className="w-5 h-5 mr-2" />
                   Voir sur GitHub
@@ -1679,7 +1690,6 @@ export default function Portfolio() {
                     </Link>
                   </div>
                 </div>
-
                 <div className="flex items-center space-x-4 p-4 rounded-lg border border-gray-800 hover:shadow-[0_0_20px_rgba(236,72,153,0.4)] transition-all duration-300 bg-gray-900/20 backdrop-blur-sm">
                   <Github className="w-6 h-6 text-gray-400" />
                   <div className="text-left">
@@ -1708,7 +1718,7 @@ export default function Portfolio() {
         {/* Footer */}
         <footer className="relative z-10 py-8 px-6 border-t border-gray-800">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
-            <p className="text-gray-500 text-sm">© 2024 Evers Darrell MBINI. Tous droits réservés.</p>
+            <p className="text-gray-500 text-sm">© 2025 Evers Darrell MBINI. Tous droits réservés.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
                 href="https://github.com/Evers280"
