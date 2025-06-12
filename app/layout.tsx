@@ -6,10 +6,10 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Evers Darrell MBINI - Développeur Back-End",
+  title: "Evers Darrell MBINI - Développeur Back-End | Portfolio",
   description:
-    "Portfolio professionnel d'Evers Darrell MBINI, développeur back-end spécialisé en Django, Python et développement d'API RESTful.",
-  keywords: "développeur, back-end, Django, Python, API, portfolio, Evers Dev MBINI",
+    "Portfolio professionnel d'Evers Darrell MBINI, développeur back-end spécialisé en Django, Next.js et gestion de bases de données. Découvrez mes projets et compétences.",
+  keywords: "développeur back-end, Django, Next.js, Python, API RESTful, bases de données, portfolio",
   authors: [{ name: "Evers Darrell MBINI" }],
   openGraph: {
     title: "Evers Darrell MBINI - Développeur Back-End",

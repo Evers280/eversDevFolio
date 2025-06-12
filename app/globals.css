@@ -3,26 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
+  * {
+    @apply border-border;
   }
-
   body {
-    @apply bg-gray-900 text-white;
-  }
-}
-
-@layer utilities {
-  .glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20;
-  }
-
-  .neon-border {
-    @apply border border-cyan-500/50 shadow-[0_0_15px_rgba(6,182,212,0.3)];
-  }
-
-  .neon-glow {
-    @apply shadow-[0_0_20px_rgba(6,182,212,0.4)];
+    @apply bg-background text-foreground;
   }
 }
 
@@ -40,15 +25,177 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-cyan-400/70;
+  @apply bg-cyan-500/70;
+}
+
+/* Animated Background Lines */
+@keyframes lineFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 0.6;
+  }
+}
+
+@keyframes lineSlide {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes linePulse {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scaleY(1.1);
+  }
+}
+
+@keyframes lineGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 2px rgba(139, 92, 246, 0.3));
+    opacity: 0.3;
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.8));
+    opacity: 0.8;
+  }
+}
+
+@keyframes lineRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lineWave {
+  0%,
+  100% {
+    d: path("M 0 50% Q 25% 40% 50% 50% T 100% 50%");
+  }
+  50% {
+    d: path("M 0 50% Q 25% 60% 50% 50% T 100% 50%");
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    stop-color: rgba(139, 92, 246, 0.3);
+  }
+  33% {
+    stop-color: rgba(59, 130, 246, 0.3);
+  }
+  66% {
+    stop-color: rgba(168, 85, 247, 0.3);
+  }
+  100% {
+    stop-color: rgba(139, 92, 246, 0.3);
+  }
+}
+
+@keyframes dashMove {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 100;
+  }
+}
+
+.animate-line-float {
+  animation: lineFloat 4s ease-in-out infinite;
+}
+
+.animate-line-slide {
+  animation: lineSlide 8s linear infinite;
+}
+
+.animate-line-pulse {
+  animation: linePulse 3s ease-in-out infinite;
+}
+
+.animate-line-glow {
+  animation: lineGlow 2s ease-in-out infinite;
+}
+
+.animate-line-rotate {
+  animation: lineRotate 20s linear infinite;
+}
+
+.animate-dash-move {
+  animation: dashMove 4s linear infinite;
+}
+
+/* Floating particles */
+@keyframes particleFloat {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translateY(-10px) translateX(5px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-5px) translateX(-3px);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translateY(-15px) translateX(8px);
+    opacity: 0.9;
+  }
+}
+
+.animate-particle-float {
+  animation: particleFloat 6s ease-in-out infinite;
 }
 
 /* Smooth animations */
-* {
-  transition: all 0.3s ease;
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
-/* Gradient text animation */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Glowing effects */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Text gradient animation */
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
