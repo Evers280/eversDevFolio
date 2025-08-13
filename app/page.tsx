@@ -1546,16 +1546,16 @@ export default function Portfolio() {
               <div className="border border-gray-800 rounded-xl group hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] backdrop-blur-sm transition-all duration-300 rounded-xl">
                 <div className="relative h-64 bg-gradient-to-br from-purple-900/20 to-purple-600/20 rounded-xl overflow-hidden mb-6">
                   <Image
-                    src="/taskmaster.png?height=256&width=400"
-                    alt="TaskMaster"
+                    src="/Gest ploided.png?height=256&width=400"
+                    alt="Gest ploided"
                     fill
                     className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <h3 className="text-2xl font-medium text-white mb-3 pl-7">TaskMaster</h3>
+                <h3 className="text-2xl font-medium text-white mb-3 pl-7">Gest ploided</h3>
                 <p className="text-gray-400 mb-4 leading-relaxed px-5">
-                  Une plateforme complète de gestion des tâches avec des fonctionnalités avancées de tri, filtrage et
-                  collaboration. Interface moderne avec tableaux de bord personnalisables.
+                  Une plateforme complète de gestion des employés avec des fonctionnalités avancées de tri et de filtrage. 
+                  Interface moderne avec tableaux de bord personnalisables.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6 pl-5">
                   {["Next.js", "Django", "Git", "Figma"].map((tech) => (
@@ -1565,12 +1565,12 @@ export default function Portfolio() {
                   ))}
                 </div>
                 <Link
-                  href="https://github.com/Evers280/task.git"
+                  href="https://gestploided.onrender.com/"
                   target="_blank"
                   className="inline-flex items-center text-white rounded-md hover:text-gray-300 hover:shadow-[0_0_15px_rgba(168,85,247,0.6)] transition-all duration-300 px-5 py-5"
                 >
                   <Github className="w-5 h-5 mr-2" />
-                  Voir sur GitHub
+                  Visiter la plateforme
                   <ExternalLink className="w-4 h-4 ml-1" />
                 </Link>
               </div>
