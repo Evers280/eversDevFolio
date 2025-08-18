@@ -1546,7 +1546,7 @@ export default function Portfolio() {
               <div className="border border-gray-800 rounded-xl group hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] backdrop-blur-sm transition-all duration-300 rounded-xl">
                 <div className="relative h-64 bg-gradient-to-br from-purple-900/20 to-purple-600/20 rounded-xl overflow-hidden mb-6">
                   <Image
-                    src="/Gest ploided.png?height=256&width=400"
+                    src="/gestPloided.png?height=256&width=400"
                     alt="Gest ploided"
                     fill
                     className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
