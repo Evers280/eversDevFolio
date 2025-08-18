@@ -1552,7 +1552,7 @@ export default function Portfolio() {
                     className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   />
                 </div>
-                <h3 className="text-2xl font-medium text-white mb-3 pl-7">Gest ploided</h3>
+                <h3 className="text-2xl font-medium text-white mb-3 pl-7">gestPloided</h3>
                 <p className="text-gray-400 mb-4 leading-relaxed px-5">
                   Une plateforme complète de gestion des employés avec des fonctionnalités avancées de tri et de filtrage. 
                   Interface moderne avec tableaux de bord personnalisables.
